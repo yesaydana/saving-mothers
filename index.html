@@ -4,11 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AnaQorgau: protecting mothers after the delivery room</title>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#EDF1F4;--surface:#fff;--ink:#13202B;--muted:#52616E;--line:#CBD5DD;--alert:#B0243C;--calm:#1F7A7A;
---serif:"Newsreader",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif}
-@media (prefers-color-scheme:dark){:root{--bg:#0F1920;--surface:#16252F;--ink:#E6EDF2;--muted:#9AAAB6;--line:#2B3C48;--alert:#F0657B;--calm:#58C0BC}}
+:root{--bg:#F4FBFE;--surface:#fff;--ink:#1E3A4C;--muted:#5A7384;--line:#CFE6EF;--alert:#E4577A;--calm:#2A9D8F;--gold:#F5B82E;--sky:#4DA8DA;
+--serif:"Fraunces",Georgia,serif;--sans:"Nunito",system-ui,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:60px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -52,12 +51,45 @@ th{font-weight:600}.tw{overflow-x:auto}
 .tier b{display:block}.t-r{border-top:5px solid #B0243C}.t-y{border-top:5px solid #C8941A}.t-g{border-top:5px solid #1F7A7A}
 details{background:var(--surface);border:1px solid var(--line);border-radius:4px;margin:.6rem 0;padding:.2rem 1rem}
 summary{cursor:pointer;font-weight:600;padding:.6rem 0}
-.verdict{background:var(--ink);color:var(--bg);padding:1.5rem;border-radius:4px;margin:1.5rem 0}
-.verdict h3{margin-top:0;color:var(--bg)}
+.verdict{background:#FFF1C9;color:var(--ink);padding:1.5rem;border-radius:18px;margin:1.5rem 0;border:2px solid var(--gold)}
+.verdict h3{margin-top:0}
 .verdict ol{padding-left:1.2rem}
 ul.src{font-size:.88rem;color:var(--muted);padding-left:1.1rem}
 footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:var(--muted);font-size:.85rem}
 @media(max-width:560px){.row,.axis{grid-template-columns:6rem 1fr;font-size:.8rem}.tiers{grid-template-columns:1fr}}
+
+body{background:linear-gradient(#D9F1FA 0,#F4FBFE 420px) no-repeat,var(--bg)}
+figure,details,.note,.tier,.fact{border-radius:16px}
+.facts{border-radius:16px;overflow:hidden}
+h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='16'%3E%3Cpath d='M2 12c0-8 10-8 10-1.5 0 4-6 4-6 0M34 12c0-8-10-8-10-1.5 0 4 6 4 6 0' fill='none' stroke='%23F5B82E' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x}
+.hero{width:100%;height:auto;display:block;margin:0 0 1.6rem;border-radius:20px}
+.seg{display:flex;gap:.4rem;flex-wrap:wrap;margin:0 0 .9rem}
+.seg button,.chips button{font:600 .88rem var(--sans);border:2px solid var(--line);background:var(--surface);color:var(--ink);padding:.35rem .8rem;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true],.chips button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.map{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;max-width:560px}
+.tile{border-radius:12px;min-height:62px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.68rem;line-height:1.15;text-align:center;padding:3px;transition:background .5s,color .5s}
+.tile b{font-size:1.05rem}
+.scale{height:10px;max-width:560px;border-radius:6px;background:linear-gradient(90deg,#FFE9C9,#E4577A);margin-top:.8rem}
+.scalel{display:flex;justify-content:space-between;max-width:560px;font-size:.75rem;color:var(--muted)}
+.people{display:flex;flex-wrap:wrap;gap:8px 10px;margin:.4rem 0 1rem}
+.p{width:22px;height:34px;position:relative;color:#B8C4CC;transition:color .5s}
+.p::before{content:"";position:absolute;left:5px;top:0;width:12px;height:12px;border-radius:50%;background:currentColor}
+.p::after{content:"";position:absolute;left:0;top:14px;width:22px;height:20px;border-radius:11px 11px 4px 4px;background:currentColor}
+.keys{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.9rem}
+.keys i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:.4rem;vertical-align:-1px}
+.delays{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.4rem 0}
+.delay{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:1rem;text-align:center;font-size:.9rem}
+.delay .e{font-size:2rem;display:block}
+.delay em{display:inline-block;font-style:normal;font-weight:700;font-size:.78rem;padding:.1rem .6rem;border-radius:999px;margin-top:.4rem}
+.bad{background:#FFD9E2}.good{background:#CDEFE9}
+.chips{display:flex;gap:.4rem;flex-wrap:wrap;margin:.6rem 0 1rem}
+.chat{background:#E6F5FB;border-radius:18px;padding:1rem;min-height:150px}
+.bub{max-width:82%;padding:.6rem .9rem;border-radius:16px;margin:.3rem 0;font-size:.92rem}
+.me{background:#fff;border-bottom-left-radius:4px}
+.bot{background:var(--sky);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.bot.r{background:#D6406A}.bot.y{background:#C8941A}.bot.g{background:#2A9D8F}
+.alert{font-size:.8rem;color:var(--muted);text-align:right;margin:.2rem .3rem}
+@media(max-width:560px){.delays{grid-template-columns:1fr}.tile{font-size:.6rem;min-height:54px}}
 </style>
 </head>
 <body>
@@ -68,6 +100,20 @@ footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:v
 
 <header id="problem">
 <h1>AnaQorgau: protecting mothers after the delivery room</h1>
+<svg class="hero" viewBox="0 0 700 230" role="img" aria-label="Illustration: a yurt under a sunny sky sends a heart to a mother's phone">
+<rect width="700" height="230" fill="#BDE8F5"/>
+<g stroke="#F5B82E" stroke-width="4" stroke-linecap="round"><path d="M600 40v-26M600 100v26M540 70h-26M660 70h26M558 28l-17-17M642 112l17 17M642 28l17-17M558 112l-17 17"/></g>
+<circle cx="600" cy="70" r="30" fill="#F5B82E"/>
+<path d="M0 190Q150 130 300 180T700 160V230H0Z" fill="#9AD9C4"/>
+<path d="M0 215Q200 170 400 205T700 195V230H0Z" fill="#6CC3A8"/>
+<path d="M255 150Q315 85 375 150Z" fill="#fff"/><rect x="255" y="150" width="120" height="48" fill="#fff"/>
+<rect x="255" y="164" width="120" height="9" fill="#E4577A"/><path d="M255 168q10-8 20 0t20 0 20 0 20 0 20 0 20 0" stroke="#F5B82E" stroke-width="3" fill="none" transform="translate(0,-4)"/>
+<rect x="305" y="172" width="20" height="26" rx="3" fill="#F5B82E"/>
+<path d="M375 150Q440 70 470 115" stroke="#1E3A4C" stroke-width="3" stroke-dasharray="6 7" fill="none"/>
+<rect x="455" y="108" width="40" height="76" rx="9" fill="#1E3A4C"/><rect x="460" y="118" width="30" height="56" rx="4" fill="#fff"/>
+<rect x="463" y="124" width="18" height="9" rx="4" fill="#4DA8DA"/><rect x="469" y="138" width="18" height="9" rx="4" fill="#E4577A"/><rect x="463" y="152" width="14" height="9" rx="4" fill="#4DA8DA"/>
+<path d="M410 62c-12-12-30 2-18 16l18 14 18-14c12-14-6-28-18-16z" fill="#E4577A"/>
+</svg>
 <p class="lede">Kazakhstan has cut maternal deaths and almost every woman gives birth in a facility. Yet most women who still die do so after delivery, some at home, and the risk differs sharply by region. The national average tells a story of success. The regional data tells a more complicated one.</p>
 
 <h2>The issue and its scope</h2>
@@ -83,6 +129,11 @@ footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:v
 <h2>The social science question inside it</h2>
 <div class="q">Why do women in a middle-income state with near-universal facility births still die postpartum and at home, and whose risk is the health system organised around?</div>
 <p>Thaddeus and Maine's (1994) Three Delays model gives the frame. Kazakhstan largely solved the third delay, adequate care once at a facility, in its hospitals. The first delay (deciding to seek care) and second (reaching it) persist where a single feldsher-midwife post covers a wide area, where young or low-income mothers start antenatal care late, and where early discharge sends women back to domestic and farm work with warning signs unnoticed. Institutions measure what happens in wards. The danger now lies in the weeks after.</p>
+<div class="delays" role="list">
+<div class="delay" role="listitem"><span class="e">🤱</span><b>Delay 1</b><br>Recognising danger and deciding to seek care<br><em class="bad">still a gap</em></div>
+<div class="delay" role="listitem"><span class="e">🛣️</span><b>Delay 2</b><br>Reaching a facility across long winter distances<br><em class="bad">still a gap</em></div>
+<div class="delay" role="listitem"><span class="e">🏥</span><b>Delay 3</b><br>Receiving adequate care once there<br><em class="good">largely solved</em></div>
+</div>
 <p>Some women are not in the system at all. Seasonal migrants and residents of peri-urban settlements without a clinic registration (prikreplenie) fall outside automated Damumed antenatal tracking. These are the women a national average cannot see.</p>
 </header>
 
@@ -98,6 +149,14 @@ footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:v
 <figcaption>Source: data.egov.kz, regional medical indicators dataset (file oblystardyn_onirlerdin_medic3). The 2025 column covers only four months, so each region's figure rests on very few births and a single death can move it by tens of points. The portal labels the first column "4 months of 2024", but its values for Zhetisu, Kostanay, Ulytau and Aktobe match the full-year 2024 ratios reported by Zakharyanova et al. (2026), and its national value (10.1) matches the annual figure. This should be confirmed with the dataset's publisher before treating the first column as a full year.</figcaption>
 </figure>
 <p>What the figure shows: Akmola jumps from 10.8 to 49.6, North Kazakhstan from 0 to 24.0 and Mangistau from 0 to 11.6, while Kostanay falls from 34.1 to 12.6. These swings are what small numbers look like. Zhetisu (36.5 to 51.0) and Ulytau (29.6 to 34.6) are the exceptions that stay high, which makes them better candidates for a targeted pilot than regions that spiked once.</p>
+<figure aria-labelledby="f2">
+<p class="ft" id="f2">The map of risk, one tile per region</p>
+<p class="fs">Switch periods and watch the colours move. Tile positions roughly follow geography.</p>
+<div class="seg" id="mapseg"><button aria-pressed="true" data-k="1">2024</button><button aria-pressed="false" data-k="2">Jan–Apr 2025</button></div>
+<div class="map" id="tmap"></div>
+<div class="scale"></div><div class="scalel"><span>0 (teal tiles)</span><span>25</span><span>55 per 100,000</span></div>
+<figcaption>Same source and caveats as the chart above. Tiles are a schematic, not a scale map.</figcaption>
+</figure>
 <h3>What the national numbers say about timing and place</h3>
 <figure>
 <div class="tw"><table>
@@ -108,6 +167,15 @@ footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:v
 <tr><td>Indirect causes</td><td>22 of 45 (48.9%)</td><td>21 of 37 (56.8%)</td><td>Chronic and cardiac risk goes unscreened at rural posts</td></tr>
 </table></div>
 <figcaption>Sources: Zakharyanova et al. (2026); Ministry of Healthcare figures as compiled for this project. In 2024, multidisciplinary hospitals accounted for 46.0% of deaths, home 21.6% and tertiary perinatal centres 21.6%.</figcaption>
+</figure>
+
+<figure aria-labelledby="f3">
+<p class="ft" id="f3">37 mothers, 2024</p>
+<p class="fs">Each figure is one woman who died. Choose a lens.</p>
+<div class="seg" id="pseg"><button aria-pressed="true" data-m="where">Where</button><button aria-pressed="false" data-m="when">When</button><button aria-pressed="false" data-m="why">Why</button></div>
+<div class="people" id="ppl" aria-hidden="true"></div>
+<div class="keys" id="pkeys"></div>
+<figcaption>Source: Zakharyanova et al. (2026), 2024 counts. The cause split uses 21 indirect and 16 direct deaths, with circulatory disease about 27% of all deaths (around 10). "Other place" is the remainder after hospital (46.0%), home and tertiary centre (21.6% each).</figcaption>
 </figure>
 <h3>Where the data is silent</h3>
 <div class="note"><b>Small numbers.</b>With 37 deaths nationally, a regional ratio rests on a handful of cases. A zero is not proof of safety, and a spike is not proof of failure. Multi-year averages are needed.</div>
@@ -134,6 +202,10 @@ footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:v
 <div class="tier t-y"><b>Yellow</b>Fever, calf swelling, breathlessness. Nurse call within hours.</div>
 <div class="tier t-g"><b>Green</b>Routine questions. Automated guidance and the next check-in.</div>
 </div>
+<h3>Try it: what a mother might see</h3>
+<div class="chips" id="chips" role="group" aria-label="Pick a message a mother might send"></div>
+<div class="chat" id="chat" aria-live="polite"><div class="bub bot g">Hello! Pick a message above to see how AnaQorgau would answer.</div></div>
+<p class="alert" style="text-align:left">Illustration of the design only, not medical advice. In practice wording would be written and tested by clinicians in Kazakh and Russian.</p>
 <h3>Tier 2: risk flags for midwives, working offline</h3>
 <p>Gradient-boosted models (XGBoost or LightGBM) on tablets used by feldsher-midwives read routine data such as blood pressure trends, hemoglobin, parity and distance to a level-3 perinatal centre. They flag high-risk pregnancies early and suggest referral or sanitary aviation before the woman deteriorates. A flag is a prompt for the midwife, never an automatic dispatch.</p>
 <h3>Two documented precedents</h3>
@@ -155,7 +227,7 @@ footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:v
 
 <h2 id="verdict">Verdict</h2>
 <div class="verdict">
-<h3>Yes, as a clinician-supervised pilot, not a national rollout.</h3>
+<h3>Yes, as a clinician-supervised pilot.</h3>
 <p>The evidence supports targeting the postpartum weeks in the regions where risk stays high across periods, Zhetisu and Ulytau. It does not support promising that the tool will cut deaths nationally, because over half of deaths are indirect causes that a message cannot treat, and because deaths are too few to measure effects quickly.</p>
 <ol>
 <li>Start in Zhetisu and Ulytau, with the midwife-facing referral tool first and check-ins second.</li>
@@ -167,7 +239,7 @@ footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:v
 </div>
 
 <h2 id="ai">AI transparency statement</h2>
-<p>[Edit to match what you actually did.] The author chose the topic, collected the data and sources, and wrote the analysis and policy judgments. An AI assistant (Claude, by Anthropic) was used to propose the project framing, restructure the argument against the assignment rubric, check the uploaded dataset, and draft the website code and parts of the copy, which the author reviewed and revised. All statistics and citations were taken from the author's sources and should be verified against the originals.</p>
+<p> I collected data and sources, wrote the skeleton of analytical part, and found pilot projects myself. An AI assistant (Gemini, by Google) was used to brainstorm the ideas and select the topic. Another AI assistant (Claude, by Anthropic) was used to propose the project framing, restructure the argument against the assignment rubric, check the uploaded dataset, and draft the website code and parts of the copy, which the author reviewed and revised. </p>
 
 <h2 id="sources">Sources</h2>
 <ul class="src">
@@ -182,13 +254,41 @@ footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:v
 <li>Still to add: Bureau of National Statistics, WHO or UNDP series for the long-run national trend; official texts of the AI law and personal data law.</li>
 </ul>
 </main>
-<footer>University course project. Data and citations to be verified before submission.</footer>
+<footer>Made with care for mothers in every aul. Aidana Yerkin. PLS419 Project. Nazarbayev University.</footer>
 <script>
 var D=[["Zhetisu",36.52,50.96],["Akmola",10.85,49.57],["Ulytau",29.63,34.59],["North Kazakhstan",0,24.04],["Zhambyl",13.34,19.82],["Aktobe",27.88,18.83],["Astana",6.14,16.04],["Kostanay",34.08,12.59],["Mangystau",0,11.62],["West Kazakhstan",18.44,10.09],["Almaty region",8.34,9.41],["Turkestan",7.94,6.66],["Shymkent",6.91,7.41],["Atyrau",13.69,7.34],["Kyzylorda",5.6,6.21],["Almaty city",4.23,2.25],["Abai",11.56,0],["East Kazakhstan",12.03,0],["Karaganda",6.33,0],["Pavlodar",0,0]],M=55,h="";
 function p(v){return (v/M*100).toFixed(1)}
 D.forEach(function(r){var lo=Math.min(r[1],r[2]);h+='<div class="row"><span>'+r[0]+'</span><div class="tr" title="'+r[0]+': 2024 '+r[1].toFixed(1)+', Jan-Apr 2025 '+r[2].toFixed(1)+'"><div class="ln" style="left:'+p(lo)+'%;width:'+(Math.abs(r[1]-r[2])/M*100).toFixed(1)+'%"></div><div class="pt a" style="left:'+p(r[1])+'%"></div><div class="pt b" style="left:'+p(r[2])+'%"></div></div></div>'});
 h+='<div class="row nat"><span>Kazakhstan</span><div class="tr" title="National: 2024 10.1, Jan-Apr 2025 11.1"><div class="ln" style="left:'+p(10.15)+'%;width:'+((11.14-10.15)/M*100).toFixed(1)+'%"></div><div class="pt a" style="left:'+p(10.15)+'%"></div><div class="pt b" style="left:'+p(11.14)+'%"></div></div></div>';
+
 document.getElementById("dumb").innerHTML=h;
+(function(){
+var T=[["West Kaz.",0,1,18.44,10.09],["Atyrau",0,2,13.69,7.34],["Mangystau",0,3,0,11.62],["Kostanay",1,0,34.08,12.59],["Aktobe",1,1,27.88,18.83],["North Kaz.",2,0,0,24.04],["Akmola",2,1,10.85,49.57],["Ulytau",2,2,29.63,34.59],["Kyzylorda",2,3,5.6,6.21],["Pavlodar",3,0,0,0],["Astana",3,1,6.14,16.04],["Karaganda",3,2,6.33,0],["Turkestan",3,3,7.94,6.66],["Shymkent",3,4,6.91,7.41],["Abai",4,1,11.56,0],["Zhambyl",4,3,13.34,19.82],["East Kaz.",5,1,12.03,0],["Zhetisu",5,2,36.52,50.96],["Almaty reg.",5,3,8.34,9.41],["Almaty city",5,4,4.23,2.25]];
+var m=document.getElementById("tmap");
+function mix(v){var t=Math.min(v/55,1),a=[255,233,201],b=[228,87,122];return "rgb("+a.map(function(x,i){return Math.round(x+(b[i]-x)*t)}).join(",")+")"}
+function paint(k){m.innerHTML="";T.forEach(function(t){var v=t[k+2],d=document.createElement("div");d.className="tile";d.style.gridColumn=t[1]+1;d.style.gridRow=t[2]+1;
+d.style.background=v===0?"#BFE8E0":mix(v);d.style.color=v>38?"#fff":"#1E3A4C";d.title=t[0]+": "+v.toFixed(1);d.innerHTML=t[0]+"<b>"+(v===0?"0":v.toFixed(0))+"</b>";m.appendChild(d)})}
+paint(1);
+document.querySelectorAll("#mapseg button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#mapseg button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");paint(+b.dataset.k)}});
+var M={where:[["Multidisciplinary hospital",17,"#4DA8DA"],["Home",8,"#E4577A"],["Tertiary perinatal centre",8,"#F5B82E"],["Other place",4,"#B8C4CC"]],
+when:[["After delivery (postpartum)",26,"#E4577A"],["Pregnancy or delivery",11,"#4DA8DA"]],
+why:[["Direct obstetric causes",16,"#4DA8DA"],["Indirect: circulatory disease (about)",10,"#D6406A"],["Indirect: other",11,"#F4A3B5"]]};
+var pp=document.getElementById("ppl"),pk=document.getElementById("pkeys");
+for(var i=0;i<37;i++){var e=document.createElement("span");e.className="p";pp.appendChild(e)}
+function lens(n){var c=[],kh="";M[n].forEach(function(r){for(var j=0;j<r[1];j++)c.push(r[2]);kh+='<span><i style="background:'+r[2]+'"></i>'+r[0]+': '+r[1]+'</span>'});
+[].forEach.call(pp.children,function(e,i){e.style.color=c[i]});pk.innerHTML=kh}
+lens("where");
+document.querySelectorAll("#pseg button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#pseg button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");lens(b.dataset.m)}});
+var C=[["Heavy bleeding after birth","r","This needs help now. A nurse is calling you. If you can, call 103 or go to the nearest clinic.","Red alert sent to nurse and perinatal centre"],
+["Bad headache and blurry vision","r","These can be signs of dangerous blood pressure. Please get checked today. A nurse will call you right away.","Red alert sent to nurse and perinatal centre"],
+["Swollen, painful calf","y","Thank you for telling us. A nurse will call you within a few hours. If you feel breathless, tell us at once.","Yellow flag sent to your midwife"],
+["I have a fever","y","A nurse will call you soon to ask a few questions. Please keep your phone close.","Yellow flag sent to your midwife"],
+["How often should the baby feed?","g","Most newborns feed often in the first weeks. Here are simple tips. We will check in again tomorrow.","No alert needed"]];
+var ch=document.getElementById("chips"),ct=document.getElementById("chat");
+C.forEach(function(c,i){var b=document.createElement("button");b.textContent=c[0];b.setAttribute("aria-pressed","false");b.onclick=function(){ch.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");
+ct.innerHTML='<div class="bub me"></div><div class="bub bot '+c[1]+'"></div><div class="alert"></div>';ct.children[0].textContent=c[0];ct.children[1].textContent=c[2];ct.children[2].textContent=c[3]};ch.appendChild(b)});
+})();
+
 </script>
 </body>
 </html>
