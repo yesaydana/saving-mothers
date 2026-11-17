@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AnaQorgau: protecting mothers after the delivery room</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF1F4;--surface:#fff;--ink:#13202B;--muted:#52616E;--line:#CBD5DD;--alert:#B0243C;--calm:#1F7A7A;
+--serif:"Newsreader",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0F1920;--surface:#16252F;--ink:#E6EDF2;--muted:#9AAAB6;--line:#2B3C48;--alert:#F0657B;--calm:#58C0BC}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--sans)}
+:focus-visible{outline:3px solid var(--alert);outline-offset:2px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:1.3rem;padding:.8rem clamp(1rem,5vw,3rem);overflow-x:auto;font-size:.9rem;white-space:nowrap}
+nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--ink)}
+main{max-width:860px;margin:0 auto;padding:0 clamp(1rem,5vw,2rem) 4rem}
+h1,h2,h3{font-family:var(--serif);line-height:1.1;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,6vw,3.9rem);margin:3rem 0 1rem}
+h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin:3.6rem 0 .8rem}
+h3{font-size:1.25rem;margin:1.6rem 0 .3rem}
+.lede{font-family:var(--serif);font-size:1.3rem;line-height:1.45;max-width:36em}
+p,li{max-width:41em}
+figure{margin:1.8rem 0;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:1.1rem}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:.9rem;max-width:46em}
+.ft{font-weight:600;margin:0}.fs{color:var(--muted);font-size:.9rem;margin:0 0 1rem}
+.legend{display:flex;gap:1.2rem;font-size:.85rem;color:var(--muted);margin-bottom:.6rem;flex-wrap:wrap}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:.35rem}
+.d24{border:2px solid var(--muted);background:var(--surface)}.d25{background:var(--alert)}
+.row{display:grid;grid-template-columns:8.5rem 1fr;gap:.7rem;align-items:center;font-size:.88rem;margin:.28rem 0}
+.row.nat{font-weight:600;border-top:1px solid var(--line);padding-top:.5rem;margin-top:.6rem}
+.tr{position:relative;height:1.3rem;background:linear-gradient(var(--line),var(--line)) 0 50%/100% 1px no-repeat}
+.ln{position:absolute;top:50%;height:3px;margin-top:-1.5px;background:var(--alert);opacity:.35}
+.pt{position:absolute;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%}
+.pt.a{border:2px solid var(--muted);background:var(--surface)}.pt.b{background:var(--alert)}
+.axis{display:grid;grid-template-columns:8.5rem 1fr;gap:.7rem;font-size:.75rem;color:var(--muted)}
+.axis div{display:flex;justify-content:space-between}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600}.tw{overflow-x:auto}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:1.6rem 0}
+.fact{background:var(--surface);padding:1rem}.fact b{display:block;font-family:var(--serif);font-size:2.3rem;line-height:1;color:var(--alert)}
+.fact span{font-size:.86rem;color:var(--muted);display:block;margin-top:.4rem}
+.q{border-left:4px solid var(--alert);padding-left:1.2rem;margin:1.5rem 0;font-family:var(--serif);font-size:1.3rem;line-height:1.4}
+.note{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--calm);padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.95rem}
+.note b{display:block}
+.est{font-size:.78rem;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:0 .35rem;margin-left:.3rem;white-space:nowrap}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:1rem 0}
+.tier{padding:.7rem;border-radius:4px;font-size:.88rem;border:1px solid var(--line);background:var(--surface)}
+.tier b{display:block}.t-r{border-top:5px solid #B0243C}.t-y{border-top:5px solid #C8941A}.t-g{border-top:5px solid #1F7A7A}
+details{background:var(--surface);border:1px solid var(--line);border-radius:4px;margin:.6rem 0;padding:.2rem 1rem}
+summary{cursor:pointer;font-weight:600;padding:.6rem 0}
+.verdict{background:var(--ink);color:var(--bg);padding:1.5rem;border-radius:4px;margin:1.5rem 0}
+.verdict h3{margin-top:0;color:var(--bg)}
+.verdict ol{padding-left:1.2rem}
+ul.src{font-size:.88rem;color:var(--muted);padding-left:1.1rem}
+footer{border-top:1px solid var(--line);padding:1.5rem;text-align:center;color:var(--muted);font-size:.85rem}
+@media(max-width:560px){.row,.axis{grid-template-columns:6rem 1fr;font-size:.8rem}.tiers{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav aria-label="Sections">
+<a href="#problem">Problem</a><a href="#data">Data</a><a href="#research">Research</a><a href="#solution">Solution</a><a href="#bill">The bill</a><a href="#verdict">Verdict</a><a href="#ai">AI statement</a><a href="#sources">Sources</a>
+</nav>
+<main>
+
+<header id="problem">
+<h1>AnaQorgau: protecting mothers after the delivery room</h1>
+<p class="lede">Kazakhstan has cut maternal deaths and almost every woman gives birth in a facility. Yet most women who still die do so after delivery, some at home, and the risk differs sharply by region. The national average tells a story of success. The regional data tells a more complicated one.</p>
+
+<h2>The issue and its scope</h2>
+<p>The national maternal mortality ratio was 11.4 per 100,000 live births in 2023 (45 deaths) and 10.1 in 2024 (37 deaths). A fall like this invites the conclusion that the problem is solved. But in 2024 the ratio was 36.5 in Zhetisu, 34.1 in Kostanay, 29.6 in Ulytau and 27.9 in Aktobe, roughly three times the national figure, while three regions recorded no maternal death at all (Zakharyanova et al., 2026).</p>
+<div class="facts">
+<div class="fact"><b>70%</b><span>of 2024 deaths were postpartum (26 of 37), down from 76% in 2023</span></div>
+<div class="fact"><b>22%</b><span>occurred at home, up from 16% in 2023</span></div>
+<div class="fact"><b>57%</b><span>had indirect causes such as heart disease</span></div>
+<div class="fact"><b>1:2,500</b><span>rural nurse or midwife to residents at some posts</span></div>
+</div>
+<p>The trend is mixed. Direct obstetric deaths fell from 23 to 16 and hemorrhage deaths from seven to three, but indirect deaths barely moved (22 to 21) and preeclampsia or eclampsia deaths rose from three to four. Rural infrastructure is also thinning: outpatient and inpatient facility density fell between 2004 and 2022 and is projected to fall further (Jobalayeva et al., 2025). A shortage of about 3,800 mid-level health workers compounds this (Alaidarova et al., 2026).</p>
+
+<h2>The social science question inside it</h2>
+<div class="q">Why do women in a middle-income state with near-universal facility births still die postpartum and at home, and whose risk is the health system organised around?</div>
+<p>Thaddeus and Maine's (1994) Three Delays model gives the frame. Kazakhstan largely solved the third delay, adequate care once at a facility, in its hospitals. The first delay (deciding to seek care) and second (reaching it) persist where a single feldsher-midwife post covers a wide area, where young or low-income mothers start antenatal care late, and where early discharge sends women back to domestic and farm work with warning signs unnoticed. Institutions measure what happens in wards. The danger now lies in the weeks after.</p>
+<p>Some women are not in the system at all. Seasonal migrants and residents of peri-urban settlements without a clinic registration (prikreplenie) fall outside automated Damumed antenatal tracking. These are the women a national average cannot see.</p>
+</header>
+
+<h2 id="data">Background and data</h2>
+<h3>Regional ratios are unstable, and that is the finding</h3>
+<p>The open-data portal publishes regional maternal mortality for two periods. Plotting every region shows something a single-year ranking hides: the high-risk list changes. Only Zhetisu and Ulytau are high in both periods.</p>
+<figure aria-labelledby="f1">
+<p class="ft" id="f1">Maternal deaths per 100,000 live births, by region, two periods</p>
+<p class="fs">Sorted by the later period. Lines show how far each region moved.</p>
+<div class="legend"><span><i class="dot d24"></i>2024 (portal column labelled "4 months of 2024")</span><span><i class="dot d25"></i>Jan–Apr 2025</span></div>
+<div id="dumb"></div>
+<div class="axis"><span></span><div><span>0</span><span>20</span><span>40</span><span>55</span></div></div>
+<figcaption>Source: data.egov.kz, regional medical indicators dataset (file oblystardyn_onirlerdin_medic3). The 2025 column covers only four months, so each region's figure rests on very few births and a single death can move it by tens of points. The portal labels the first column "4 months of 2024", but its values for Zhetisu, Kostanay, Ulytau and Aktobe match the full-year 2024 ratios reported by Zakharyanova et al. (2026), and its national value (10.1) matches the annual figure. This should be confirmed with the dataset's publisher before treating the first column as a full year.</figcaption>
+</figure>
+<p>What the figure shows: Akmola jumps from 10.8 to 49.6, North Kazakhstan from 0 to 24.0 and Mangistau from 0 to 11.6, while Kostanay falls from 34.1 to 12.6. These swings are what small numbers look like. Zhetisu (36.5 to 51.0) and Ulytau (29.6 to 34.6) are the exceptions that stay high, which makes them better candidates for a targeted pilot than regions that spiked once.</p>
+<h3>What the national numbers say about timing and place</h3>
+<figure>
+<div class="tw"><table>
+<tr><th>Indicator</th><th>2023</th><th>2024</th><th>What it implies</th></tr>
+<tr><td>Maternal deaths (ratio per 100k)</td><td>45 (11.4)</td><td>37 (10.1)</td><td>Aggregate decline can breed complacency</td></tr>
+<tr><td>Postpartum deaths</td><td>34 of 45 (75.6%)</td><td>26 of 37 (70.2%)</td><td>Delivery rooms are safer than the weeks after</td></tr>
+<tr><td>Deaths at home</td><td>7 of 45 (15.6%)</td><td>8 of 37 (21.6%)</td><td>Warning and referral are failing outside facilities</td></tr>
+<tr><td>Indirect causes</td><td>22 of 45 (48.9%)</td><td>21 of 37 (56.8%)</td><td>Chronic and cardiac risk goes unscreened at rural posts</td></tr>
+</table></div>
+<figcaption>Sources: Zakharyanova et al. (2026); Ministry of Healthcare figures as compiled for this project. In 2024, multidisciplinary hospitals accounted for 46.0% of deaths, home 21.6% and tertiary perinatal centres 21.6%.</figcaption>
+</figure>
+<h3>Where the data is silent</h3>
+<div class="note"><b>Small numbers.</b>With 37 deaths nationally, a regional ratio rests on a handful of cases. A zero is not proof of safety, and a spike is not proof of failure. Multi-year averages are needed.</div>
+<div class="note"><b>Near-misses and delays are not counted.</b>Records show where a woman died, not how long she waited, whether she called anyone, or whether a danger sign was dismissed. Delayed reporting of near-miss complications and poor connectivity in remote auls leave the first two delays invisible.</div>
+<div class="note"><b>Unregistered women.</b>Seasonal migrants and peri-urban residents without registration are outside antenatal tracking, so their risk is undercounted by design. Region is also not the same as rurality: a high-ratio oblast contains urban and rural women, and the data here cannot separate them.</div>
+
+<h2 id="research">Current state of research</h2>
+<h3>Why women die, and where the system strains (Kazakhstan)</h3>
+<p>Zakharyanova et al. (2026) show that death has moved out of the delivery room: most deaths are postpartum and over half have indirect causes, which demands surveillance beyond childbirth. Nukeshtayeva et al. (2024) link maternal mortality to antenatal coverage (down from 88.2% in 2019 to 85.2% in 2020), midwifery staffing, domestic violence and household economics. Together they say who dies and what drives it, but neither tests an intervention.</p>
+<h3>Rural capacity and workforce</h3>
+<p>Jobalayeva et al. (2025) document declining rural facility density through 2022 with further decline projected, and Alaidarova et al. (2026) document the mid-level staff deficit and 1:2,500 ratios in primary care. Derbisbek et al. (2026) add that adolescent mothers in Astana start antenatal care later and face higher postpartum infection risk, pointing to access and sociocultural barriers. This literature explains the strain on the system but treats it as a staffing problem to be solved by hiring.</p>
+<h3>A framework for delay</h3>
+<p>Thaddeus and Maine (1994) offer the conceptual lens used across this literature. It predicts that fixing hospital quality alone leaves deaths that stem from delays in recognising danger and in travelling for care, which is the pattern in Kazakhstan's data.</p>
+<h3>Digital tools in low-resource settings (global)</h3>
+<p>Vatsa et al. (2025) ran a cluster randomized trial of a digital platform across the pregnancy-to-postpartum continuum in Kenya (Jacaranda Health), finding promise for informing women and prompting them to seek recommended care in systems that do not reliably deliver it. This is the strongest causal evidence available, but it comes from settings with far lower baseline provider density than Kazakhstan.</p>
+<div class="note"><b>The gap.</b>Kazakh scholarship diagnoses where and when women die and projects facility shortages through 2030. Global studies test digital triage in sub-Saharan Africa. No work asks how a lightweight, offline-capable, bilingual postpartum triage tool could fit Kazakhstan's own systems (Damumed, eGov), under its data-localization rules and high-risk AI legislation. AnaQorgau addresses that gap.</div>
+
+<h2 id="solution">The AI-assisted solution: AnaQorgau</h2>
+<p>The name joins <em>ana</em> (mother) and <em>qorgau</em> (to protect). It is a two-tier system run by the Ministry of Healthcare (Republican Center for Electronic Health) through regional perinatal centres, reaching pregnant and postpartum women through about 4,780 rural medical and feldsher-obstetric posts, starting in the highest-risk regions.</p>
+<h3>Tier 1: bilingual check-ins for mothers</h3>
+<p>Automated two-way messages by SMS or WhatsApp in Kazakh and Russian during pregnancy and the 42-day postpartum window. A small fine-tuned language model sorts replies and voice notes into three urgency tiers. Red cases go straight to a human nurse. The model never decides alone.</p>
+<div class="tiers">
+<div class="tier t-r"><b>Red</b>Heavy bleeding, severe headache, blurred vision. Human contact now, referral prompted.</div>
+<div class="tier t-y"><b>Yellow</b>Fever, calf swelling, breathlessness. Nurse call within hours.</div>
+<div class="tier t-g"><b>Green</b>Routine questions. Automated guidance and the next check-in.</div>
+</div>
+<h3>Tier 2: risk flags for midwives, working offline</h3>
+<p>Gradient-boosted models (XGBoost or LightGBM) on tablets used by feldsher-midwives read routine data such as blood pressure trends, hemoglobin, parity and distance to a level-3 perinatal centre. They flag high-risk pregnancies early and suggest referral or sanitary aviation before the woman deteriorates. A flag is a prompt for the midwife, never an automatic dispatch.</p>
+<h3>Two documented precedents</h3>
+<p><b>Jacaranda Health PROMPTS (Kenya, with expansion to Ghana and Nigeria).</b> An AI-enabled two-way SMS platform that classifies incoming questions from women without reliable internet, routes urgent red flags to nurses and automates routine advice. It has reached over two million mothers, and the Vatsa et al. (2025) trial evaluated it. The effect sizes in the trial should be quoted from the paper before presenting.</p>
+<p><b>Wadhwani AI (India).</b> Machine-learning risk models with state health departments predict which pregnant women are likely to miss antenatal visits or develop complications, paired with a vernacular conversational assistant for auxiliary nurse midwives (HealthVaani). The aim is to let overstretched workers prioritise home visits by risk rather than treating every pregnancy equally.</p>
+<p>Both started where the problem is shortage of any provider. Kazakhstan's problem is thinner: providers exist but contact breaks down after discharge. That is why AnaQorgau is built around postpartum follow-up and midwife support rather than replacing care.</p>
+
+<h2 id="bill">The bill</h2>
+<details open><summary>Environmental</summary>
+<p>Kazakhstan's grid is coal-heavy (roughly 54% to 62% coal by recent figures, higher on older thermal measures), and thermal plants use water for cooling. Training a frontier model or running continuous cloud inference would draw on that grid. AnaQorgau avoids this by using small quantized models (under 8 billion parameters) and on-device tabular models, which keeps inference energy far below cloud LLM use and lets the tool run through winter outages. The claimed saving of over 95% is a planning assumption and should be measured in the pilot.</p></details>
+<details open><summary>Economic <span class="est">planning estimate, not sourced</span></summary>
+<p>Pilot in four high-ratio regions: about $1.2M to $1.8M over 24 months, covering Damumed integration, Kazakh-Russian clinical fine-tuning, tablets for around 1,200 rural posts and SMS gateway fees. The state pays through the mandatory social health insurance fund and Ministry of Healthcare digital allocations. Local IT contractors capture the software contracts. The state saves on avoided airlifts and intensive care stays, though savings depend on deaths and complications actually falling, which small numbers make hard to prove.</p></details>
+<details open><summary>Labor</summary>
+<p>The tool does not replace midwives. It redirects scarce attention to the highest-risk patients, but without protected, paid time, alerts become more unpaid screen work for staff already covering up to 2,500 residents. Hidden labor sits behind the model: bilingual obstetricians and annotators who label symptom descriptions, including regional Kazakh idioms for pain and bleeding, and clinicians who audit false negatives. This work should be budgeted and credited, not assumed.</p></details>
+<details open><summary>Political and governance</summary>
+<p>Under Kazakhstan's Law on Artificial Intelligence, clinical triage that affects health and life should be treated as high-risk, which implies conformity testing, lifecycle risk audits, explainability logs and human oversight. Maternal records are sensitive personal data under the personal data and cybersecurity rules and should stay on sovereign servers, not foreign commercial APIs. The exact article numbers and effective dates must be checked against the official texts before the final submission. There is also an institutional risk: audit trails may expose delayed referrals that local administrators would prefer not to show, so the system needs independent oversight, not just ministry control. Surveillance creep is real, because a tool that tracks pregnant women could be repurposed for other ends without strict purpose limits.</p></details>
+<details open><summary>Data ethics</summary>
+<p>Consent is the sharpest issue. Rural women often share phones with husbands or mothers-in-law, so messages about complications or contraception need discreet opt-in and neutral wording to avoid conflict at home. Models trained on Astana or Almaty tertiary data may be miscalibrated for rural women with higher baseline anemia or later registration. A false negative, preeclampsia read as green, could be fatal, so liability must be settled before any deployment. Women outside Damumed tracking would not be reached by this system at all, so outreach must include them deliberately.</p></details>
+
+<h2 id="verdict">Verdict</h2>
+<div class="verdict">
+<h3>Yes, as a clinician-supervised pilot, not a national rollout.</h3>
+<p>The evidence supports targeting the postpartum weeks in the regions where risk stays high across periods, Zhetisu and Ulytau. It does not support promising that the tool will cut deaths nationally, because over half of deaths are indirect causes that a message cannot treat, and because deaths are too few to measure effects quickly.</p>
+<ol>
+<li>Start in Zhetisu and Ulytau, with the midwife-facing referral tool first and check-ins second.</li>
+<li>Keep humans in every red-flag decision, with paid time and clear clinical liability.</li>
+<li>Host all data on sovereign servers and give women control over who sees their messages.</li>
+<li>Judge success by process measures (postnatal visits completed, time from alert to referral, near-misses caught), plus multi-year mortality.</li>
+</ol>
+<p>If these conditions cannot be met, Kazakhstan should invest in midwife staffing and postpartum home visits first.</p>
+</div>
+
+<h2 id="ai">AI transparency statement</h2>
+<p>[Edit to match what you actually did.] The author chose the topic, collected the data and sources, and wrote the analysis and policy judgments. An AI assistant (Claude, by Anthropic) was used to propose the project framing, restructure the argument against the assignment rubric, check the uploaded dataset, and draft the website code and parts of the copy, which the author reviewed and revised. All statistics and citations were taken from the author's sources and should be verified against the originals.</p>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li>Alaidarova, M. E., et al. (2026). Analysis of the current state and prospects of nursing in primary health care in the Republic of Kazakhstan. doi:10.59598/ME-2305-6053-2026-118-1-170-179</li>
+<li>Derbisbek, S. B., et al. (2026). Adverse maternal outcomes and risk factors of adolescent pregnancy: Astana, Kazakhstan. Int J Public Health, 70, 1608992. doi:10.3389/ijph.2025.1608992</li>
+<li>Jobalayeva, B., et al. (2025). Past, current status, and future trends of the rural healthcare network in Kazakhstan. Sci Rep, 15, 26913. doi:10.1038/s41598-025-11432-w</li>
+<li>Nukeshtayeva, K., et al. (2024). Factors associated with maternal mortality in Kazakhstan: pre- and during-pandemic comparison. Front Public Health, 12, 1337564. doi:10.3389/fpubh.2024.1337564</li>
+<li>Thaddeus, S., &amp; Maine, D. (1994). Too far to walk: maternal mortality in context. Soc Sci Med, 38(8), 1091-1110. doi:10.1016/0277-9536(94)90226-7</li>
+<li>Vatsa, R., et al. (2025). Impact evaluation of a digital health platform for Kenyan women across the pregnancy-postpartum continuum: a cluster randomized controlled trial. PLoS Med, 22(2), e1004527. doi:10.1371/journal.pmed.1004527</li>
+<li>Zakharyanova (Iskakova), et al. (2026). Maternal mortality in Kazakhstan, 2023-2024: national trends, regional variation, timing, place of death, and cause-specific patterns.</li>
+<li>Open data portal of Kazakhstan: data.egov.kz, regional medical indicators (oblystardyn_onirlerdin_medic3).</li>
+<li>Still to add: Bureau of National Statistics, WHO or UNDP series for the long-run national trend; official texts of the AI law and personal data law.</li>
+</ul>
+</main>
+<footer>University course project. Data and citations to be verified before submission.</footer>
+<script>
+var D=[["Zhetisu",36.52,50.96],["Akmola",10.85,49.57],["Ulytau",29.63,34.59],["North Kazakhstan",0,24.04],["Zhambyl",13.34,19.82],["Aktobe",27.88,18.83],["Astana",6.14,16.04],["Kostanay",34.08,12.59],["Mangystau",0,11.62],["West Kazakhstan",18.44,10.09],["Almaty region",8.34,9.41],["Turkestan",7.94,6.66],["Shymkent",6.91,7.41],["Atyrau",13.69,7.34],["Kyzylorda",5.6,6.21],["Almaty city",4.23,2.25],["Abai",11.56,0],["East Kazakhstan",12.03,0],["Karaganda",6.33,0],["Pavlodar",0,0]],M=55,h="";
+function p(v){return (v/M*100).toFixed(1)}
+D.forEach(function(r){var lo=Math.min(r[1],r[2]);h+='<div class="row"><span>'+r[0]+'</span><div class="tr" title="'+r[0]+': 2024 '+r[1].toFixed(1)+', Jan-Apr 2025 '+r[2].toFixed(1)+'"><div class="ln" style="left:'+p(lo)+'%;width:'+(Math.abs(r[1]-r[2])/M*100).toFixed(1)+'%"></div><div class="pt a" style="left:'+p(r[1])+'%"></div><div class="pt b" style="left:'+p(r[2])+'%"></div></div></div>'});
+h+='<div class="row nat"><span>Kazakhstan</span><div class="tr" title="National: 2024 10.1, Jan-Apr 2025 11.1"><div class="ln" style="left:'+p(10.15)+'%;width:'+((11.14-10.15)/M*100).toFixed(1)+'%"></div><div class="pt a" style="left:'+p(10.15)+'%"></div><div class="pt b" style="left:'+p(11.14)+'%"></div></div></div>';
+document.getElementById("dumb").innerHTML=h;
+</script>
+</body>
+</html>
