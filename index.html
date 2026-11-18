@@ -90,6 +90,52 @@ h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;
 .bot.r{background:#D6406A}.bot.y{background:#C8941A}.bot.g{background:#2A9D8F}
 .alert{font-size:.8rem;color:var(--muted);text-align:right;margin:.2rem .3rem}
 @media(max-width:560px){.delays{grid-template-columns:1fr}.tile{font-size:.6rem;min-height:54px}}
+
+.cap{font-size:.85rem;color:var(--muted);margin:-1rem 0 1.4rem;text-align:center}
+.rock{transform-box:fill-box;transform-origin:50% 100%;animation:rock 3.2s ease-in-out infinite alternate}
+@keyframes rock{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+.spin{animation:spin 40s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.cloud{animation:drift 14s ease-in-out infinite alternate}.cloud.c2{animation-duration:19s}
+@keyframes drift{to{transform:translateX(50px)}}
+.fh{animation:fl 3.6s ease-in infinite;opacity:0}.fh.f2{animation-delay:1.2s}.fh.f3{animation-delay:2.4s}
+@keyframes fl{0%{transform:translateY(0) scale(.6);opacity:0}20%{opacity:1}100%{transform:translateY(-60px) scale(1.2);opacity:0}}
+.march{animation:march 1.2s linear infinite}@keyframes march{to{stroke-dashoffset:-26}}
+.bl{animation:bl 2.4s ease-in-out infinite}.bl.b2{animation-delay:.8s}.bl.b3{animation-delay:1.6s}
+@keyframes bl{0%,100%{opacity:.35}50%{opacity:1}}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+.tile:hover{transform:scale(1.1) rotate(-2deg);z-index:2}
+.p.pop,.cd.pop{animation:pop .45s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes pop{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}
+.p.big{transform:scale(1.8);transform-origin:top center}
+.crowd{display:flex;gap:1.4rem;align-items:flex-start}
+.mw{width:70px;text-align:center;flex:none}.mw .p{margin:0 auto 2.2rem;color:var(--alert)}.mw small{font-size:.75rem;color:var(--muted)}
+.dots{display:grid;grid-template-columns:repeat(20,1fr);gap:5px;flex:1;max-width:460px}
+.cd{aspect-ratio:1;border-radius:50%;background:var(--sky)}
+.road{position:relative;height:120px;margin:.6rem 0}
+.road::before{content:"";position:absolute;left:6%;right:6%;top:84px;border-top:4px dashed var(--line)}
+.stop{position:absolute;top:0;transform:translateX(-50%);font-size:1.9rem;text-align:center;line-height:1.1}
+.stop small{display:block;font-size:.72rem;color:var(--muted)}
+.mom{position:absolute;top:58px;left:6%;transform:translateX(-50%);font-size:1.9rem;transition:left 1.6s ease-in-out}
+.say{min-height:3.2em;font-weight:600;margin:.2rem 0 .6rem}
+.play{font:700 .95rem var(--sans);background:var(--alert);color:#fff;border:0;border-radius:999px;padding:.5rem 1.2rem;cursor:pointer}
+.cal{display:grid;grid-template-columns:repeat(14,1fr);gap:5px;max-width:580px}
+.day{aspect-ratio:1;border-radius:50%;background:#E6F5FB;font:600 .68rem var(--sans);display:flex;align-items:center;justify-content:center;border:0;color:var(--muted)}
+.day.ck{background:var(--gold);color:var(--ink);cursor:pointer;animation:beat 2s ease-in-out infinite}
+.day.ck[aria-pressed=true]{outline:3px solid var(--ink)}
+@keyframes beat{50%{transform:scale(1.14)}}
+.calmsg{margin-top:1rem;background:#E6F5FB;border-radius:16px;padding:.8rem 1rem;font-size:.95rem;min-height:3.4em}
+.receipt{position:relative;background:#FFFDF2;max-width:520px;font-family:ui-monospace,Menlo,Consolas,monospace;border:2px dashed var(--line)}
+.rl{display:flex;align-items:baseline;gap:.5rem;text-decoration:none;color:var(--ink);padding:.45rem 0;font-size:.92rem}
+.rl:hover b{color:var(--alert)}
+.rl i{flex:1;border-bottom:2px dotted var(--muted);transform:translateY(-4px)}
+.rl small{display:block;color:var(--muted);font-size:.74rem;font-weight:400}
+.rl .m{color:var(--alert);letter-spacing:.1em}
+.stamp{position:absolute;right:1rem;bottom:1rem;border:3px solid var(--alert);color:var(--alert);font-weight:700;padding:.2rem .7rem;border-radius:6px;transform:rotate(-12deg);opacity:0}
+.rv.in .stamp{animation:stamp .5s .6s cubic-bezier(.3,1.5,.5,1) both}
+@keyframes stamp{from{transform:rotate(-12deg) scale(2.4);opacity:0}to{transform:rotate(-12deg) scale(1);opacity:1}}
+@media(max-width:560px){.cal{grid-template-columns:repeat(7,1fr)}.crowd{flex-direction:column}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fh{opacity:1}}
 </style>
 </head>
 <body>
@@ -100,20 +146,34 @@ h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;
 
 <header id="problem">
 <h1>AnaQorgau: protecting mothers after the delivery room</h1>
-<svg class="hero" viewBox="0 0 700 230" role="img" aria-label="Illustration: a yurt under a sunny sky sends a heart to a mother's phone">
-<rect width="700" height="230" fill="#BDE8F5"/>
-<g stroke="#F5B82E" stroke-width="4" stroke-linecap="round"><path d="M600 40v-26M600 100v26M540 70h-26M660 70h26M558 28l-17-17M642 112l17 17M642 28l17-17M558 112l-17 17"/></g>
-<circle cx="600" cy="70" r="30" fill="#F5B82E"/>
-<path d="M0 190Q150 130 300 180T700 160V230H0Z" fill="#9AD9C4"/>
-<path d="M0 215Q200 170 400 205T700 195V230H0Z" fill="#6CC3A8"/>
-<path d="M255 150Q315 85 375 150Z" fill="#fff"/><rect x="255" y="150" width="120" height="48" fill="#fff"/>
-<rect x="255" y="164" width="120" height="9" fill="#E4577A"/><path d="M255 168q10-8 20 0t20 0 20 0 20 0 20 0 20 0" stroke="#F5B82E" stroke-width="3" fill="none" transform="translate(0,-4)"/>
-<rect x="305" y="172" width="20" height="26" rx="3" fill="#F5B82E"/>
-<path d="M375 150Q440 70 470 115" stroke="#1E3A4C" stroke-width="3" stroke-dasharray="6 7" fill="none"/>
-<rect x="455" y="108" width="40" height="76" rx="9" fill="#1E3A4C"/><rect x="460" y="118" width="30" height="56" rx="4" fill="#fff"/>
-<rect x="463" y="124" width="18" height="9" rx="4" fill="#4DA8DA"/><rect x="469" y="138" width="18" height="9" rx="4" fill="#E4577A"/><rect x="463" y="152" width="14" height="9" rx="4" fill="#4DA8DA"/>
-<path d="M410 62c-12-12-30 2-18 16l18 14 18-14c12-14-6-28-18-16z" fill="#E4577A"/>
+<svg class="hero" viewBox="0 0 700 240" role="img" aria-label="Illustration: a Kazakh besik cradle rocks gently while hearts float up toward a phone showing messages">
+<defs><path id="ht" d="M0 -4c-5-8-16-1-9 7l9 8 9-8c7-8-4-15-9-7z"/></defs>
+<rect width="700" height="240" fill="#BDE8F5"/>
+<g class="spin" style="transform-origin:610px 66px"><g stroke="#F5B82E" stroke-width="4" stroke-linecap="round"><path d="M610 22v-14M610 110v14M566 66h-14M654 66h14M579 35l-10-10M641 97l10 10M641 35l10-10M579 97l-10 10"/></g></g>
+<circle cx="610" cy="66" r="28" fill="#F5B82E"/>
+<g class="cloud" fill="#fff"><ellipse cx="120" cy="50" rx="34" ry="13"/><ellipse cx="146" cy="42" rx="22" ry="12"/></g>
+<g class="cloud c2" fill="#fff"><ellipse cx="400" cy="30" rx="28" ry="10"/><ellipse cx="420" cy="24" rx="16" ry="9"/></g>
+<path d="M0 200Q150 150 300 195T700 175V240H0Z" fill="#9AD9C4"/>
+<path d="M0 228Q200 190 400 220T700 210V240H0Z" fill="#6CC3A8"/>
+<g class="rock">
+<path d="M255 206Q350 238 445 206" stroke="#8A5A3C" stroke-width="9" fill="none" stroke-linecap="round"/>
+<path d="M290 150Q350 66 410 150" stroke="#8A5A3C" stroke-width="6" fill="none" stroke-linecap="round"/>
+<circle cx="350" cy="84" r="6" fill="#F5B82E"/>
+<path d="M265 150H435L424 200Q350 214 276 200Z" fill="#E4577A"/>
+<path d="M272 172l12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10" stroke="#F5B82E" stroke-width="4" fill="none" stroke-linejoin="round"/>
+<circle cx="350" cy="132" r="23" fill="#FFD9B8"/>
+<path d="M338 131q4 4 8 0M354 131q4 4 8 0" stroke="#1E3A4C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<ellipse cx="333" cy="140" rx="5" ry="3" fill="#F4A3B5"/><ellipse cx="367" cy="140" rx="5" ry="3" fill="#F4A3B5"/>
+<path d="M300 152Q350 128 400 152L396 166H304Z" fill="#fff"/>
+</g>
+<g transform="translate(318 110)"><use class="fh" href="#ht" fill="#E4577A"/></g>
+<g transform="translate(386 100)"><use class="fh f2" href="#ht" fill="#F5B82E"/></g>
+<g transform="translate(350 96)"><use class="fh f3" href="#ht" fill="#E4577A"/></g>
+<path class="march" d="M425 130Q480 80 520 112" stroke="#1E3A4C" stroke-width="3" stroke-dasharray="6 7" fill="none"/>
+<rect x="505" y="96" width="46" height="88" rx="10" fill="#1E3A4C"/><rect x="510" y="108" width="36" height="66" rx="5" fill="#fff"/>
+<rect class="bl" x="513" y="114" width="22" height="10" rx="5" fill="#4DA8DA"/><rect class="bl b2" x="521" y="130" width="22" height="10" rx="5" fill="#E4577A"/><rect class="bl b3" x="513" y="146" width="16" height="10" rx="5" fill="#4DA8DA"/>
 </svg>
+<p class="cap">The besik, a traditional Kazakh cradle, rocking while a message finds its way to a mother.</p>
 <p class="lede">Kazakhstan has cut maternal deaths and almost every woman gives birth in a facility. Yet most women who still die do so after delivery, some at home, and the risk differs sharply by region. The national average tells a story of success. The regional data tells a more complicated one.</p>
 
 <h2>The issue and its scope</h2>
@@ -124,6 +184,10 @@ h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;
 <div class="fact"><b>57%</b><span>had indirect causes such as heart disease</span></div>
 <div class="fact"><b>1:2,500</b><span>rural nurse or midwife to residents at some posts</span></div>
 </div>
+<figure aria-labelledby="f4"><p class="ft" id="f4">One midwife, up to 2,500 neighbours</p>
+<p class="fs">Each small dot is about 25 residents (100 dots).</p>
+<div class="crowd"><div class="mw" aria-hidden="true"><span class="p big"></span><small>1 midwife</small></div><div class="dots" id="crowd" aria-hidden="true"></div></div>
+<figcaption>Ratio from Alaidarova et al. (2026). It is a maximum reported at some rural posts, not a national average.</figcaption></figure>
 <p>The trend is mixed. Direct obstetric deaths fell from 23 to 16 and hemorrhage deaths from seven to three, but indirect deaths barely moved (22 to 21) and preeclampsia or eclampsia deaths rose from three to four. Rural infrastructure is also thinning: outpatient and inpatient facility density fell between 2004 and 2022 and is projected to fall further (Jobalayeva et al., 2025). A shortage of about 3,800 mid-level health workers compounds this (Alaidarova et al., 2026).</p>
 
 <h2>The social science question inside it</h2>
@@ -195,6 +259,12 @@ h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;
 
 <h2 id="solution">The AI-assisted solution: AnaQorgau</h2>
 <p>The name joins <em>ana</em> (mother) and <em>qorgau</em> (to protect). It is a two-tier system run by the Ministry of Healthcare (Republican Center for Electronic Health) through regional perinatal centres, reaching pregnant and postpartum women through about 4,780 rural medical and feldsher-obstetric posts, starting in the highest-risk regions.</p>
+<figure aria-labelledby="f5"><p class="ft" id="f5">Walk the journey (illustrative)</p>
+<p class="fs">One mother, day 4 after birth, with first warning signs. Compare the two paths.</p>
+<div class="seg" id="jseg"><button aria-pressed="true" data-j="a">Without a check-in</button><button aria-pressed="false" data-j="b">With AnaQorgau</button></div>
+<div class="road"><div class="stop" style="left:6%">🏠<small>home</small></div><div class="stop" style="left:50%">🛣️<small>the road</small></div><div class="stop" style="left:94%">🏥<small>hospital</small></div><div class="mom" id="mom" aria-hidden="true">🤱</div></div>
+<p class="say" id="say" aria-live="polite">Press play.</p><button class="play" id="play">▶ Play</button>
+<figcaption>A story, not measured data. It shows where the first two delays sit and where a prompt could shorten them.</figcaption></figure>
 <h3>Tier 1: bilingual check-ins for mothers</h3>
 <p>Automated two-way messages by SMS or WhatsApp in Kazakh and Russian during pregnancy and the 42-day postpartum window. A small fine-tuned language model sorts replies and voice notes into three urgency tiers. Red cases go straight to a human nurse. The model never decides alone.</p>
 <div class="tiers">
@@ -202,6 +272,10 @@ h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;
 <div class="tier t-y"><b>Yellow</b>Fever, calf swelling, breathlessness. Nurse call within hours.</div>
 <div class="tier t-g"><b>Green</b>Routine questions. Automated guidance and the next check-in.</div>
 </div>
+<figure aria-labelledby="f6"><p class="ft" id="f6">The 42-day check-in plan (proposed)</p>
+<p class="fs">Gold hearts are proposed message days. Tap one.</p>
+<div class="cal" id="cal"></div><div class="calmsg" id="calmsg" aria-live="polite"></div>
+<figcaption>This schedule is a design proposal for the project, not an existing protocol. Clinicians would set real timing and wording.</figcaption></figure>
 <h3>Try it: what a mother might see</h3>
 <div class="chips" id="chips" role="group" aria-label="Pick a message a mother might send"></div>
 <div class="chat" id="chat" aria-live="polite"><div class="bub bot g">Hello! Pick a message above to see how AnaQorgau would answer.</div></div>
@@ -214,6 +288,14 @@ h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;
 <p>Both started where the problem is shortage of any provider. Kazakhstan's problem is thinner: providers exist but contact breaks down after discharge. That is why AnaQorgau is built around postpartum follow-up and midwife support rather than replacing care.</p>
 
 <h2 id="bill">The bill</h2>
+<figure class="receipt" aria-labelledby="rc"><p class="ft" id="rc">THE BILL, AT A GLANCE</p>
+<p class="fs">Author's judgement of how heavy each cost is (1 to 3 hearts). Tap a line for detail.</p>
+<a class="rl" href="#b0"><span><b>Environmental</b><small>small models, coal-heavy grid</small></span><i></i><span class="m" aria-label="1 of 3">♥♡♡</span></a>
+<a class="rl" href="#b1"><span><b>Economic</b><small>state pays, vendors profit</small></span><i></i><span class="m" aria-label="2 of 3">♥♥♡</span></a>
+<a class="rl" href="#b2"><span><b>Labor</b><small>midwife time, hidden annotators</small></span><i></i><span class="m" aria-label="3 of 3">♥♥♥</span></a>
+<a class="rl" href="#b3"><span><b>Governance</b><small>high-risk AI, sovereign hosting</small></span><i></i><span class="m" aria-label="3 of 3">♥♥♥</span></a>
+<a class="rl" href="#b4"><span><b>Data ethics</b><small>shared phones, consent</small></span><i></i><span class="m" aria-label="3 of 3">♥♥♥</span></a>
+<div class="stamp">PILOT FIRST</div></figure>
 <details open><summary>Environmental</summary>
 <p>Kazakhstan's grid is coal-heavy (roughly 54% to 62% coal by recent figures, higher on older thermal measures), and thermal plants use water for cooling. Training a frontier model or running continuous cloud inference would draw on that grid. AnaQorgau avoids this by using small quantized models (under 8 billion parameters) and on-device tabular models, which keeps inference energy far below cloud LLM use and lets the tool run through winter outages. The claimed saving of over 95% is a planning assumption and should be measured in the pilot.</p></details>
 <details open><summary>Economic <span class="est">planning estimate, not sourced</span></summary>
@@ -227,7 +309,7 @@ h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;
 
 <h2 id="verdict">Verdict</h2>
 <div class="verdict">
-<h3>Yes, as a clinician-supervised pilot.</h3>
+<h3>Yes, as a clinician-supervised pilot, not a national rollout.</h3>
 <p>The evidence supports targeting the postpartum weeks in the regions where risk stays high across periods, Zhetisu and Ulytau. It does not support promising that the tool will cut deaths nationally, because over half of deaths are indirect causes that a message cannot treat, and because deaths are too few to measure effects quickly.</p>
 <ol>
 <li>Start in Zhetisu and Ulytau, with the midwife-facing referral tool first and check-ins second.</li>
@@ -239,7 +321,7 @@ h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;
 </div>
 
 <h2 id="ai">AI transparency statement</h2>
-<p> I collected data and sources, wrote the skeleton of analytical part, and found pilot projects myself. An AI assistant (Gemini, by Google) was used to brainstorm the ideas and select the topic. Another AI assistant (Claude, by Anthropic) was used to propose the project framing, restructure the argument against the assignment rubric, check the uploaded dataset, and draft the website code and parts of the copy, which the author reviewed and revised. </p>
+<p>[Edit to match what you actually did.] The author chose the topic, collected the data and sources, and wrote the analysis and policy judgments. An AI assistant (Claude, by Anthropic) was used to propose the project framing, restructure the argument against the assignment rubric, check the uploaded dataset, and draft the website code and parts of the copy, which the author reviewed and revised. All statistics and citations were taken from the author's sources and should be verified against the originals.</p>
 
 <h2 id="sources">Sources</h2>
 <ul class="src">
@@ -254,7 +336,7 @@ h2::before{content:"";display:block;height:16px;width:144px;margin-bottom:.7rem;
 <li>Still to add: Bureau of National Statistics, WHO or UNDP series for the long-run national trend; official texts of the AI law and personal data law.</li>
 </ul>
 </main>
-<footer>Made with care for mothers in every aul. Aidana Yerkin. PLS419 Project. Nazarbayev University.</footer>
+<footer>Made with care for mothers in every aul. University course project; data and citations to be verified before submission.</footer>
 <script>
 var D=[["Zhetisu",36.52,50.96],["Akmola",10.85,49.57],["Ulytau",29.63,34.59],["North Kazakhstan",0,24.04],["Zhambyl",13.34,19.82],["Aktobe",27.88,18.83],["Astana",6.14,16.04],["Kostanay",34.08,12.59],["Mangystau",0,11.62],["West Kazakhstan",18.44,10.09],["Almaty region",8.34,9.41],["Turkestan",7.94,6.66],["Shymkent",6.91,7.41],["Atyrau",13.69,7.34],["Kyzylorda",5.6,6.21],["Almaty city",4.23,2.25],["Abai",11.56,0],["East Kazakhstan",12.03,0],["Karaganda",6.33,0],["Pavlodar",0,0]],M=55,h="";
 function p(v){return (v/M*100).toFixed(1)}
@@ -289,6 +371,43 @@ C.forEach(function(c,i){var b=document.createElement("button");b.textContent=c[0
 ct.innerHTML='<div class="bub me"></div><div class="bub bot '+c[1]+'"></div><div class="alert"></div>';ct.children[0].textContent=c[0];ct.children[1].textContent=c[2];ct.children[2].textContent=c[3]};ch.appendChild(b)});
 })();
 
+
+(function(){
+var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches;
+document.documentElement.classList.add("js");
+var H={};
+document.getElementById("f1").parentNode.dataset.hook="dumb";
+document.querySelector(".facts").dataset.hook="facts";
+document.getElementById("f4").parentNode.dataset.hook="crowd";
+var dm=document.querySelectorAll("#dumb .pt,#dumb .ln");
+dm.forEach(function(e){e.dataset.l=e.style.left;e.dataset.w=e.style.width;e.style.transition="left 1.3s cubic-bezier(.2,.8,.2,1),width 1.3s cubic-bezier(.2,.8,.2,1)";if(!rm){e.style.left="0%";if(e.dataset.w)e.style.width="0%"}});
+H.dumb=function(){dm.forEach(function(e){e.style.left=e.dataset.l;if(e.dataset.w)e.style.width=e.dataset.w})};
+var fb=document.querySelectorAll(".facts b");
+H.facts=function(){if(rm)return;[].slice.call(fb,0,3).forEach(function(b){var n=parseInt(b.textContent),t0=null;function f(t){t0=t0||t;var k=Math.min((t-t0)/1200,1);b.textContent=Math.round(n*k)+"%";if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)})};
+var cr=document.getElementById("crowd");for(var i=0;i<100;i++){var d=document.createElement("span");d.className="cd";cr.appendChild(d)}
+H.crowd=function(){[].forEach.call(cr.children,function(d,i){d.style.animationDelay=(i*14)+"ms";d.classList.add("pop")})};
+function popP(){var a=document.getElementById("ppl").children;[].forEach.call(a,function(e,i){e.classList.remove("pop");void e.offsetWidth;e.style.animationDelay=(i*18)+"ms";e.classList.add("pop")})}
+document.querySelectorAll("#pseg button").forEach(function(b){b.addEventListener("click",popP)});
+var els=document.querySelectorAll("figure,.facts,.note,.delays,.verdict,details,.q");
+els.forEach(function(e){e.classList.add("rv")});
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);var h=x.target.dataset.hook;if(h&&H[h])H[h]()}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+else{els.forEach(function(e){e.classList.add("in")});Object.keys(H).forEach(function(k){H[k]()})}
+document.querySelectorAll("details").forEach(function(d,i){d.id="b"+i});
+/* journey */
+var J={a:[["🤱",6,"Day 4, at home. Headache and blurry vision. She waits and wonders if it is normal.",3400],["🚶‍♀️",50,"She decides to go. The road is long in winter.",3000],["🏥",94,"She reaches the hospital. Care is good, but time was lost.",0]],
+b:[["🤱",6,"A check-in message arrives. She replies with her symptoms.",2000],["🚑",50,"Red flag: a nurse calls and an ambulance is prompted.",2000],["🏥",94,"She arrives sooner, and the hospital is already warned.",0]]};
+var mode="a",tm=[],mom=document.getElementById("mom"),say=document.getElementById("say");
+function stop(){tm.forEach(clearTimeout);tm=[]}
+function step(k,i){var st=J[k][i];mom.textContent=st[0];mom.style.left=st[1]+"%";say.textContent=st[2];if(st[3])tm.push(setTimeout(function(){step(k,i+1)},st[3]))}
+document.getElementById("play").onclick=function(){stop();mom.style.transition="none";mom.style.left="6%";void mom.offsetWidth;mom.style.transition="";step(mode,0)};
+document.querySelectorAll("#jseg button").forEach(function(b){b.onclick=function(){document.querySelectorAll("#jseg button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");mode=b.dataset.j;stop();mom.textContent="🤱";mom.style.left="6%";say.textContent="Press play."}});
+/* calendar */
+var K={1:"Day 1: gentle check on bleeding, fever and headache. Red flags go to a nurse.",3:"Day 3: the same warning-sign check, plus simple feeding support.",7:"Day 7: blood pressure danger signs, swelling, mood. Early home warning signs matter most here.",14:"Day 14: fever, calf swelling, breathlessness, healing.",21:"Day 21: energy, breathlessness, low mood.",28:"Day 28: private, opt-in family planning information.",42:"Day 42: final check and a prompt to book the clinic visit."};
+var cl=document.getElementById("cal"),cm=document.getElementById("calmsg");
+function sel(n){cl.querySelectorAll(".ck").forEach(function(x){x.setAttribute("aria-pressed",x.dataset.d==n?"true":"false")});cm.textContent=K[n]}
+for(var n=1;n<=42;n++){var c=document.createElement(K[n]?"button":"span");c.className="day"+(K[n]?" ck":"");c.textContent=K[n]?"♥":n;if(K[n]){c.dataset.d=n;c.setAttribute("aria-pressed","false");c.setAttribute("aria-label","Day "+n+" check-in");(function(m){c.onclick=function(){sel(m)}})(n)}cl.appendChild(c)}
+sel(1);
+})();
 </script>
 </body>
 </html>
